@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    position:relative ;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height : 100%;
+    background-color: #22282e;
+    color:  #f1f1f1;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 60px;
+
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+/* .navigation ul li:hover{
+    color: blue;
+} */
+.navigation ul li:nth-child(1){
+    margin-bottom: 20px;
+}
+.navigation ul li:nth-child(1):hover{
+    color:  darkslategray;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration:none;
+    color:  #f1f1f1;
+}
+.navigation ul li a:hover:not(.a-brand) {
+    background-color:#bb161c;
+}
+
+.menu-title> div{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration:none;
+    color:  #f1f1f1;
+}
+.menu-title .icon-menu{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+
+}
+.menu-title .title-menu{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+/* .navigation ul li a .icon .fa{
+
+    font-size: 24px;
+} */
+.navigation >ul> li> a> .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    transition: 0.5s;
+}
+.main.active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.main .topbar{
+    width: 100%;
+    background-color: white;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.toggleadmin{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+/* .toggleadmin.active{
+
+} */
+.toggleadmin::before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #111;
+}
+.searchbar{
+    position: relative;
+    width:400px ;
+    margin: 0 10px;
+}
+.searchbar label{
+    position: relative;
+    width: 100%;
+}
+.searchbar label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline: none;
+    border: 1px solid rgba(0,0,0, 0.2);
+}
+.searchbar label .fa{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+.dropdown-log {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-logcontent {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: -70px;
+  }
+
+  .dropdown-logcontent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-logcontent a:hover {background-color: #ddd;}
+  .dropdown-log:hover .dropdown-logcontent {display: block;}
+  
+
+.user-area{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user-area img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.detailsCategory{
+    position: relative;
+    width:100% ;
+    padding: 10px;
+}
+.detailsCategory .card-header{
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+}
+.detailsCategory img{
+    width: 100px;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card-header h2{
+   font-weight: 600;
+}
+.catBtn{
+    position: relative;
+    padding: 5px 10px;
+    background:#bb161c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+
+}
+.detailsCategory table:not(.my-order-table){
+    width:100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.detailsCategory table thead td{
+    font-weight: 600;
+}
+.detailsCategory table tr{
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+.detailsCategory table tbody tr:last-child{
+    border-bottom: none;
+}
+
+.detailsCategory table tbody tr:hover{
+    background-color: #ccc;
+    color:white;
+}
+.detailsCategory table tr td{
+    padding: 9px 5px;
+}
+.detailsCategory .recentCategory table thead tr td:last-child,
+.detailsCategory .recentCategory table tbody tr td:last-child{
+    text-align: right;
+}
+.detailsCategory .recentCategory table thead tr td:nth-child(2),
+.detailsCategory .recentCategory table tbody tr td:nth-child(2){
+    text-align: right;
+    padding-right: 20px;
+}
+
+.detailsCategory .recentCategory table thead tr td:nth-child(3),
+.detailsCategory .recentCategory table tbody tr td:nth-child(3){
+    text-align: center;
+}
+.status{
+    position: relative;
+    padding: 2px 4px;
+    text-decoration: none;
+    background: #f00;
+    color:white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.statusButtons{
+    width: 40%;
+}
+/* tr  a.activeBtn {
+    display: none;
+}
+
+tr a.deactiveBtn {
+    display: inline;
+}
+  
+tr.active a.activeBtn {
+   
+    display: inline;
+}
+  
+tr.active a.deactiveBtn {
+    display: none;
+} */
+tr span.Act {
+    display: none;
+}
+
+tr span.DAct {
+    display: inline;
+    white-space: nowrap;
+}
+  
+tr.active span.Act {
+   
+    display: inline;
+}
+  
+tr.active span.DAct {
+    display: none;
+}
+.activeBtn{
+    background: #8de02c;
+}
+.deactiveBtn{
+    background: #f9ca3f;
+}
+.editBtn{
+    background: #1795ce;
+}
+.deleteBtn{
+    background:#f00;
+} 
+/* on screen that are 991px or less  */
+
+@media(max-width:992px){
+
+     .navigation{
+        left: -300px;
+    }
+   .navigation.active{
+        left: 0;
+        width: 300px;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+      
+    .main.active{
+         width: calc(100% - 300px);
+        left: 300px;
+    }
+     
+
+}
+@media (max-width: 768px) {
+    .detailsCategory .recentCategory tr td span{
+        /* display: grid; */
+        /* display: flex;
+        flex-direction: column;
+        /* grid-template-columns: 1fr 1fr; */
+        text-align: center; 
+       
+    }
+   
+    .detailsCategory .recentCategory{
+        overflow-x: auto;
+    }
+    .detailsCategory .recentCategory .catBtn{
+        width: 150px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .detailsCategory .card-header{
+        display: block;
+    }
+    .detailsCategory .card-header h2{
+        padding-bottom: 20px;
+    }
+} 
+
+ @media (max-width: 480px) {
+    .navigation{
+        width: 100% ;
+        left: -100% ;
+        z-index: 1000;
+    }
+    .navigation.active{
+        width: 100% ;
+        left: 0;
+    }
+    .toggleadmin.active{
+        z-index: 10000;
+        right: 0;
+        left: initial;
+        position: fixed;
+    }
+    .toggleadmin.active::before{
+        color: #fff;
+    }
+    .detailsCategory .recentCategory{
+        overflow-x: auto;
+    }
+    .detailsCategory .card-header{
+        display: block;
+    }
+    .detailsCategory .card-header h2{
+        padding-bottom: 20px;
+    }
+    .detailsCategory .recentCategory tr td span{
+        display: flex;
+        flex-direction: column;
+        text-align: center; 
+      
+    }
+    tr span.Act {
+        display: none !important;
+    }
+    
+    tr span.DAct {
+        display: flex !important;
+        flex-direction: column;
+    }
+      
+    tr.active span.Act {
+        display: flex !important;
+        flex-direction: column;
+    }
+      
+    tr.active span.DAct {
+        display: none !important;
+        
+    }
+    .statusButtons span {
+        margin-bottom: 5px;
+      }
+    .main,.main.active{
+        width: 100%;
+        left: 0;
+    }
+      
+   
+}  
+
+/* Order section */
+  
+.my-order-table {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	margin: 15px;
+	padding: 0;
+	width: 95%;
+	table-layout: fixed;
+
+  }
+  
+.my-order-table caption {
+	font-size: 1.5em;
+	margin: .5em 0 .75em;
+  }
+  
+.my-order-table tr {
+	background-color: #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0, 0.1);
+	padding: .35em;
+  }
+  
+.my-order-table th,
+.my-order-table td {
+	padding: .625em;
+	text-align: center;
+  }
+  
+.my-order-table th {
+	font-size: .85em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+  }
+.my-order-table td img{
+	width: 100px;
+	height: 100px;
+}
+  
+  @media screen and (max-width: 800px) {
+	.my-order-table {
+	  border: 0;
+	  width: 100%;
+	}
+  
+	.my-order-table caption {
+	  font-size: 1.3em;
+	}
+	
+	.my-order-table thead {
+	  border: none;
+	  clip: rect(0 0 0 0);
+	  height: 1px;
+	  margin: -1px;
+	  overflow: hidden;
+	  padding: 0;
+	  position: absolute;
+	  width: 1px;
+	}
+	
+	.my-order-table tr {
+	  border-bottom: 3px solid #ddd;
+	  display: block;
+	  margin-bottom: .625em;
+	  margin-left: 1rem;
+	  margin-right: 1rem;
+	}
+	
+	.my-order-table td {
+	  border-bottom: 1px solid #ddd;
+	  display: block;
+	  font-size: .8em;
+	  text-align: right;
+	}
+	
+	.my-order-table td::before {
+	  content: attr(data-label);
+	  float: left;
+	  font-weight: bold;
+	  text-transform: uppercase;
+	}
+	
+	.my-order-table td:last-child {
+	  border-bottom: 0;
+	}
+  }
+
+/* Order section */
+
+  
+  

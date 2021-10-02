@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <aside>
+        <div class="container">
+            <div class="navigation">
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-meetup" aria-hidden="true"></i></i></span>
+                            <span class="title">
+                                <h2>Brand Name</h2>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu-title">
+                        <div>
+                            <span class="icon-menu"><i class="fa fa-laptop" aria-hidden="true"></i></span>
+                            <span class="title-menu">MENU</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-home" aria-hidden="true"></i>
+                            </span>
+                            <span class="title">Categories Master</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-user-o" aria-hidden="true"></i>
+                            </span>
+                            <span class="title">Product Master</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-comment" aria-hidden="true"></i>
+                            </span>
+                            <span class="title">Order Master</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-question" aria-hidden="true"></i>
+                            </span>
+                            <span class="title">User Listings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i>
+                            </span>
+                            <span class="title">Contact us leads</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </aside>
+    <!-- left panel completed-->
+
+
+    <div class="main">
+        <div class="topbar">
+            <div class="toggleadmin" onclick="toggleMenu()">
+            </div>
+            <div class="drop-log">
+            <div class="user-area">
+                <img src="/images/user.jpg">
+            </div>
+            <div class="user-dropdown">
+                <a href="#"><i class="fa fa-power-off"></i>Logout</a>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="detailsCategory">
+            <div class="recentCategory">
+                <div class="card-header">
+                    <h2>Categories </h2>
+                    <a href="#" class="catBtn">Add Categories</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="serial">#</td>
+                            <td>ID</td>
+                            <td>Categories</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="active">
+                            <td class="serial">1</td>
+                            <td>4202211</td>
+                            <td>Men</td>
+                            <td class="statusButtons">
+                                <span class="Act"><a href="#" class='status activeBtn' >Active</a></span>
+                                <span class="DAct"><a href="#" class='status deactiveBtn'>Deactive</a></span>
+                                <span><a href="#" class='status editBtn'>Edit</a></span>
+                                <span><a href="#" class='status deleteBtn'>Delete</a></span>
+                            </td>
+                        </tr>
+                        <tr class="active">
+                            <td class="serial">1</td>
+                            <td>4202211</td>
+                            <td>Men</td>
+                            <td class="statusButtons">
+                                <span class="Act"><a href="#" class='status activeBtn' >Active</a></span>
+                                <span class="DAct"><a href="#" class='status deactiveBtn'>Deactive</a></span>
+                                <span><a href="#" class='status editBtn'>Edit</a></span>
+                                <span><a href="#" class='status deleteBtn'>Delete</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer>
+
+    </footer>
+
+
+    <script src="/assets/js/app.js"></script>
+</body>
+
+</html>

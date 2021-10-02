@@ -1,0 +1,90 @@
+ /* Style inputs, select elements and textareas */
+ /* input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  } */
+  
+  /* Style the label to display next to the inputs */
+  /* label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  } */
+  
+  /* Style the submit button */
+
+
+.form-Card{
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 20px;
+}
+.form-Categories{
+    position: relative;
+    width:100% ;
+    padding: 10px;
+  }
+.form-Categories .form-Head {
+    position: relative;
+    padding: 15px 15px 0;
+   
+  }
+.form-Head{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+.form-Title{
+  margin: 0;
+color: #333333;
+font-size: 22px;
+font-weight: 500;
+  }
+
+.form-Card .form-Body{
+    padding: 0px 15px 10px 15px;
+}
+.input-Section{
+   position: relative;
+    width:100%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  label {
+    font-size: 15px;
+margin-bottom: 10px;
+text-transform: uppercase;
+font-weight: 400;
+color: #9A9A9A;
+    display:block;
+  } 
+  .form-Submit{
+    position: relative;
+    width:100%;
+   
+    padding: 10px;
+    margin-top: 10px;
+  }
+  input[type=text],.res-select,input[type=file],textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  } 
+  button[type=submit] {
+    background-color:#bb161c ;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .field_error{
+    color: red;
+    margin-top: 10px;
+  }
